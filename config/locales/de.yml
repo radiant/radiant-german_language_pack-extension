@@ -14,11 +14,11 @@ de:
         page:
           attributes:
             slug:
-              taken: 'Slug schon in Benutzung als Kind dieser Seite' # slug_in_use
+              taken: 'Slug schon als Kind dieser Seite in Benutzung' # slug_in_use
         user:
           attributes:
             email:
-              invalid: 'ungültige E-Mail-Adresse' # invalid_email
+              invalid: 'Ungültige E-Mail-Adresse' # invalid_email
             login:
               taken: 'Login schon in Benutzung' # login already in use
             password:
@@ -33,8 +33,8 @@ de:
   breadcrumb: 'Breadcrumb'
   buttons:
     create: '{{name}} erstellen'     
-    save_and_continue: 'Sichern und weiterbearbeiten'
-    save_changes: 'Änderungen sichern'  
+    save_and_continue: 'Speichern und weiterbearbeiten'
+    save_changes: 'Änderungen speichern'  
   cancel: 'Abbrechen'
   change: 'Ändern'
   close: 'Schliessen'
@@ -51,7 +51,7 @@ de:
       only_day: "%e"
       short: "%e. %b"
     month_names: [~, Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
-    order: [:day, :month, :year]
+    order: [ :day, :month, :year ]
   delete_layout: 'Layout löschen'  
   delete_pages: 'Lösche {{pages}}'  
   delete_snippet: 'Snippet löschen'
@@ -91,14 +91,14 @@ de:
   notes: 'Notizen'    
   optional: 'Optional'
   or: 'oder'
-  page: 'Seite'     
+  page: 'Seite'
   page_page: 'Seitenpart'
   page_title: 'Seitentitel'  
   page_type: 'Seitentyp'
   pages: 'Seiten'     
   pages_controller:
-    removed_many: "Die Seiten wurden erfolgreich von der Website gelöscht."   
-    removed_one: "Die Seite wurde erfolgreich von der Website gelöscht."  
+    removed_many: "Die Seiten wurden erfolgreich gelöscht."   
+    removed_one: "Die Seite wurde erfolgreich gelöscht."  
     saved: "Ihre Seite wurde gespeichert."  
   password: 'Passwort' 
   password_confirmation: 'Neues Passwort bestätigen'
@@ -118,16 +118,16 @@ de:
   remove: 'Löschen'
   remove_layout: 'Layout löschen' 
   remove_page: 'Seite löschen'
-  remove_pages: 'Lösche {{pages}}' 
-  remove_tab: 'Lösche Tab'  
-  remove_user: 'Lösche Benutzer'
+  remove_pages: '{{pages}} löschen' 
+  remove_tab: 'Tab löschen'
+  remove_user: 'Benutzer löschen'
   required: 'erforderlich'  
   resource_controller:
     not_found: "{{humanized_model_name}} wurde nicht gefunden."
     removed: "{{humanized_model_name}} wurde gelöscht."  
     saved: "{{humanized_model_name}} wurde gespeichert."
     update_conflict: "Seit dem letzten Laden wurde {{humanized_model_name}} geändert. Änderungen können nicht ohne Verlust gespeichert werden." 
-    validation_errors: "Beim Validfieren dieses Formulars sind Fehler aufgetreten. Bitte überprüfen Sie die Eingaben und korrigieren Sie die Fehler."
+    validation_errors: "Beim Validieren dieses Formulars sind Fehler aufgetreten. Bitte überprüfen Sie die Eingaben und korrigieren Sie die Fehler."
   reviewed: 'Überprüft'
   roles: 'Rollen'
   saving_changes: Änderungen werden gespeichert
@@ -135,15 +135,15 @@ de:
   scheduled: "Geplant"
   search_tags: 'Tags durchsuchen:'
   select:
-    default: '<standardwert>'
-    inherit: '<vererbt>'
-    none: '<keine>' 
-    normal: '<normal>'
+    default: '<Standardwert>'
+    inherit: '<Vererbt>'
+    none: '<Keine>' 
+    normal: '<Normal>'
   settings: 'Einstellungen'
   slug: 'Slug'
-  snippet: 'Snippet'   
-  snippets: 'Snippets'          
-  status: 'Status'    
+  snippet: 'Snippet'
+  snippets: 'Snippets'
+  status: 'Status'
     # Warnings and info text:
   testing: Testing
   text:
