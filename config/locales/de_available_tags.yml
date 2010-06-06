@@ -24,12 +24,17 @@ de:
     children-each:
       Gibt alle Kinder aus. Innerhalb dieses Tags werden alle Seitenattribut-Tags
       auf die aktuelle Kind-Seite gemappt.
+      
+      Mit @paginated="true"@ wird eine paginierte Liste ausgegeben. Die @will_paginate@-Optionen
+      können ebenfalls angegeben werden, einschließlich 
+      @per_page@, @previous_label@, @next_label@, @separator@, @inner_window@ und @outer_window@.
 
       *Verwendung&#58;*
       
       <pre><code><r:children:each [offset="number"] [limit="number"]
-       [by="published_at|updated_at|created_at|slug|title|keywords|description"]
-       [order="asc|desc"] [status="draft|reviewed|published|hidden|all"]>
+       [by="published_at|updated_at|created_at|slug|title|keywords|des</code><code>cription"]
+       [order="asc|des</code><code>c"] [status="draft|reviewed|published|hidden|all"]
+       [paginated="true"] [per_page="number"]>
        ...
       </r:children:each>
       </code></pre>
@@ -39,6 +44,7 @@ de:
       Seiten-Attribut-Tags innerhalb dieses Tags beziehen sich auf das aktuelle Kind. Das ist
       manchmal nützlich, wenn man sich innerhalb eines anderen Tags befindet (z.B.  &lt;r&#58;find&gt;)
       und auf das aktuelle Kind zurückverweisen will.
+
       *Verwendung&#58;*
       
       <pre><code><r:children:each>
@@ -73,11 +79,11 @@ de:
       
       *Verwendung&#58;*
       
-      <pre><code><r:children&#58;each>
+      <pre><code><r:children:each>
         <r:if_first >
             ...
         </r:if_first>
-      </r:children&#58;each>
+      </r:children:each>
       </code></pre>
       
   
@@ -87,11 +93,11 @@ de:
       
       *Verwendung&#58;*
       
-      <pre><code><r:children&#58;each>
+      <pre><code><r:children:each>
         <r:if_last >
             ...
         </r:if_last>
-      </r:children&#58;each>
+      </r:children:each>
       </code></pre>
       
   
@@ -101,7 +107,7 @@ de:
       
       *Verwendung&#58;*
       
-      <pre><code><r:children&#58;each>
+      <pre><code><r:children:each>
         <r:unless_first >
             ...
         </r:unless_first>
@@ -202,7 +208,19 @@ de:
       *Verwendung&#58;*
 
       <pre><code><r:find url="value_to_find">...</r:find></code></pre>
-  
+ 
+    gravatar:
+      Gibt den Gravatar des Seitenautors aus.
+
+      *Verwendung&#58;*
+
+      <pre><code> <r:gravatar /></code></pre>
+
+      Oder
+
+      <pre><code> <r:gravatar [name="User Name"] [rating="G | PG | R | X"] [size="32px"] /> </code></pre>
+
+ 
     if_ancestor_or_self:
       Gibt die enthaltenen Elemente aus, wenn der aktuelle Seitenkontext entweder die tatsächliche Seite
       oder eine der Elternseiten ist.
@@ -307,7 +325,7 @@ de:
 
       *Verwendung&#58;*
 
-      <pre><code> <r:meta&#58;description [tag="false"] /> </code></pre>
+      <pre><code> <r:meta:des</code><code>cription [tag="false"] /> </code></pre>
   
     meta-keywords:
       Gibt die Keywords der Seite als Meta-Tag aus, solange 'tag'
@@ -326,13 +344,13 @@ de:
 
       <pre><code> <r:meta [tag="false"] />
        <r:meta>
-         <r:description [tag="false"] />
+         <r:des</code><code>cription [tag="false"] />
          <r:keywords [tag="false"] />
        </r:meta>
       </code></pre>
   
     navigation-if_first:
-      Gibt die enthaltenen Elemente aus, falls das Element das erste in der
+      Gibt die enthaltenen Elemente aus, falls das Element das erste Element in der
       Navigationsliste ist.
 
       *Verwendung&#58;*
@@ -340,12 +358,28 @@ de:
       <pre><code><r:normal><r:if_first>...</r:if_first></r:normal></code></pre>
   
     navigation-if_last:
-      Gibt die enthaltenen Elemente aus, falls das Element das letzte in der
+      Gibt die enthaltenen Elemente aus, falls das Element das letzte Element in der
       Navigationsliste ist.
 
       *Verwendung&#58;*
 
       <pre><code><r:normal><r:if_last>...</r:if_last></r:normal></code></pre>
+  
+    navigation-unless_first:
+      Gibt die enthaltenen Elemente aus, falls das Element nicht das erste Element in der
+      Navigationsliste ist.
+
+      *Verwendung&#58;*
+
+      <pre><code><r:normal><r:unless_first>...</r:unless_first></r:normal></code></pre>
+  
+    navigation-unless_last:
+      Gibt die enthaltenen Elemente aus, falls das Element nicht das letzte Element in der
+      Navigationsliste ist.
+
+      *Verwendung&#58;*
+
+      <pre><code><r:normal><r:unless_last>...</r:unless_last></r:normal></code></pre>
   
     navigation:
       Gibt eine Liste von Links (spezifiziert im @url@-Attribut) anhand der folgenden
@@ -370,7 +404,7 @@ de:
 
       <pre>
         <code>
-        <r:navigation urls="[Title&#58; url | Title&#58; url | ...]">
+        <r:navigation urls="[Title</code>:<code> url | Title</code>:<code> url | ...]">
         <r:normal><a href="<r:url />"><r:title /></a></r:normal>
         <r:here><strong><r:title /></strong></r:here>
         <r:selected><strong><a href="<r:url />"><r:title /></a></strong></r:selected>
@@ -378,6 +412,8 @@ de:
       </r:navigation>
       </code>
       </pre>
+
+
   
     page:
       Legt fest, daß Tags, die auf Seitenattribute verweisen, sich auf die aktuelle
@@ -386,7 +422,19 @@ de:
       *Verwendung&#58;*
       
       <pre><code><r:page>...</r:page></code></pre>
-  
+
+    pagination:
+      Dieses Tag wird normalerweise nicht direkt aufgerufen. Mit dem Attribut @pagination="true"@  
+      wird eine Liste beim Anzeigen automatisch paginiert.
+
+      *Verwendung&#58;*
+
+      <pre><code>
+      <r:children:each paginated="true" per_page="50">
+          <r:child>...</r:child>
+        </r:children:each>
+      </code></pre>
+      
     parent:
       Seitenattribut-Tags innerhalb dieses Tags verweisen auf die Elternseite der
       aktuellen Seite.
@@ -426,7 +474,7 @@ de:
 
       gibt folgendes aus&#58;
 
-      <pre><code>&#8220;A revolutionary quotation.&#8221;</code></pre>
+      <pre><code> </code>&#8220;<code>A revolutionary quotation.</code>&#8221;<code> </code></pre>
   
     snippet:
       Gibt das im @name@-Attribut angegebene Snippet im Seitenkontext aus.
