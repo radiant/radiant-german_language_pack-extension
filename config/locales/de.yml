@@ -8,7 +8,7 @@ de:
         invalid: 'ungültiges Format' #invalid_format
         not_a_number: 'Muss eine Zahl sein' # must be number
         not_a_page: "there must be a page at this address"
-        not_permitted: 'this must be one of the permitted values'
+        not_permitted: 'muss einer der erlaubten Werte sein'
         taken: 'Name schon in Benutzung' # name_in_use
         too_long: '{{count}}-Zeichen-Limit' # character_limit
         too_short: '{{count}}-Zeichen-Minimum' # character_minimum
@@ -26,13 +26,22 @@ de:
             password:
               confirmation: 'muss der Bestätigung entsprechen' # password_confirmation
   add_child: 'Neue Unterseite'
-  add_field: 'Add Field'
+  add_field: 'Feld hinzufügen'
   add_part: 'Neuer Part'
   add_tab: 'fügt Tab ein'   
   admin: 'Administrator' 
+  asset_types:
+    all: Alle
+    images: Bilder
+    videos: Videos
+    audios: Töne
+    fonts: Schriftarten
+    flashes: Flash
+    pdfs: PDF
+    documents: Dokumente
   available_tags: 'Verfügbare Tags'
   available_tags_for: 'Verfügbare Tags für {{name}}'
-  body: 'Body'  
+  body: 'Inhalt'  
   breadcrumb: 'Breadcrumb'
   buttons:
     create: '{{name}} erstellen'     
@@ -43,25 +52,25 @@ de:
   close: 'Schliessen'
   config:
     admin:
-      title: 'admin header title'
+      title: 'Admin-Bereich'
     defaults:
       locale: 'default language'
       page:
-        fields: "page fields"
-        filter: "page filter"
-        parts: "page parts"
-        status: "page status"
+        fields: "Felder"
+        filter: "Filter"
+        parts: "Teile"
+        status: "Status"
       snippet:
-        filter: "snippet filter"
+        filter: "Filter"
     dev:
-      host: "dev site domain name"
+      host: "Entwicklungsname"
     local:
-      timezone: "local timezone"
+      timezone: "Lokale Zeitzone"
     site:
-      host: "site domain"
-      title: "site title"
+      host: "Domain der Webseite"
+      title: "Titel der Webseite"
     user:
-      allow_password_reset?: "allow password reset"
+      allow_password_reset?: "Passwort zurücksetzbar"
   content: 'Inhalt'
   content_type: 'Inhalt&#8209;Typ'    
   creating_status: 'Erzeuge {{model}}&#8230;'
@@ -85,11 +94,11 @@ de:
   designer: 'Designer'
   draft: 'Entwurf'
   edit: 'Edit'
-  edit_configuration: 'Edit Configuration'
+  edit_configuration: 'Konfiguration bearbeiten'
   edit_layout: 'Layout bearbeiten'
   edit_page:  'Seite bearbeiten'   
-  edit_preferences: 'Edit Preferences'
-  edit_settings: 'Edit Settings'
+  edit_preferences: 'Voreinstellungen bearbeiten'
+  edit_settings: 'Einstellungen bearbeiten'
   edit_snippet: 'Snippet bearbeiten'
   edit_user: 'Benutzer bearbeiten'
   email_address: 'E-Mail Adresse'
@@ -98,7 +107,7 @@ de:
   filter: 'Filter'
   hidden: 'Versteckt'
   hide: 'Verstecken' 
-  keywords: 'Keywords'
+  keywords: 'Schlüsselworte'
   language: 'Sprache'
   layout: 'Layout'  
   layouts: 'Layouts'
@@ -109,22 +118,22 @@ de:
   more: 'Mehr'
   more_info: 'More Info'
   name: 'Name'
-  new_homepage: 'New Homepage'
+  new_homepage: 'Neue Startseite'
   new_layout: 'Neues Layout'    
   new_page: 'Neue Seite'
   new_password: 'Neues Passwort'
   new_snippet: 'Neues Snippet'
   new_user: 'Neuer Benutzer'  
-  no: 'No'
+  no: Nein
   no_layouts: 'Keine Layouts' 
   no_pages: 'Keine Seiten' 
   no_snippets: 'Keine Snippets' 
-  normal_page: 'Normal Page'
+  normal_page: 'Normale Seite'
   notes: 'Notizen'    
   optional: 'Optional'
   or: 'oder'
   page: 'Seite'
-  page_hierarchy: 'Page hierarchy of the current site'
+  page_hierarchy: 'Seitenhierarchie'
   page_page: 'Seitenpart'
   page_title: 'Seitentitel'  
   page_type: 'Seitentyp'
@@ -143,7 +152,7 @@ de:
   preferences_controller:
     error_updating: 'Beim Aktualisieren Ihrer Einstellungen ist ein Fehler aufgetreten.'    
     updated: 'Ihre Einstellungen wurden aktualisiert.' 
-  preview: 'Preview'
+  preview: 'Vorschau'
   published: 'Veröffentlicht' 
   published_at: 'Veröffentlicht am' 
   published_on: 'Veröffentlicht am' 
@@ -168,7 +177,7 @@ de:
   reviewed: 'Überprüft'
   roles: 'Rollen'
   saving_changes: Änderungen werden gespeichert
-  saving_preferences: Einstellungen werden gespeichert
+  saving_preferences: Voreinstellungen werden gespeichert
   scheduled: "Geplant"
   search_tags: 'Tags durchsuchen:'
   select:
@@ -177,6 +186,8 @@ de:
     none: '<Keine>' 
     normal: '<Normal>'
   settings: 'Einstellungen'
+  sheets:
+    root_required: Eine Startseite muss angelegt sein.
   show_all: 'Show all'
   slug: 'Slug'
   snippet: 'Snippet'
@@ -186,13 +197,13 @@ de:
   testing: Testing
   text:
     layouts:
-      remove_warning: 'Sie sind sicher, das folgende Layout <strong class="warning">dauerhaft entfernen</strong> zu wollen?'   
+      remove_warning: 'Sind sie sicher, das folgende Layout <strong class="warning">dauerhaft entfernen</strong> zu wollen?'   
     pages: 
-      remove_warning: 'Sie sind sicher, folgende {{pages}} <strong class="warning">dauerhaft entfernen</strong> zu wollen?' 
+      remove_warning: 'Sind sie sicher, folgende {{pages}} <strong class="warning">dauerhaft entfernen</strong> zu wollen?' 
     snippets:
-      remove_warning:'Sind Sie sich sicher, dass Sie das folgende Snippet <strong class="warning">dauerhaft entfernen</strong> wollen?'
+      remove_warning:'Sind Sie sicher, dass Sie das folgende Snippet <strong class="warning">dauerhaft entfernen</strong> wollen?'
     users: 
-      remove_warning: 'Sind Sie sich sicher, dass Sie den Benutzer <strong class="warning">dauerhaft entfernen</strong> möchten?'
+      remove_warning: 'Sind Sie sicher, dass Sie den Benutzer <strong class="warning">dauerhaft entfernen</strong> möchten?'
   this_file_language: "Deutsch" 
   time:
     am: ""
@@ -211,7 +222,7 @@ de:
     at: 'um'
     by: 'von'
     last_updated: 'Zuletzt geändert'
-  type: 'Type'
+  type: 'Typ'
   units:
     GB: "GB"
     KB: "KB"
@@ -224,15 +235,15 @@ de:
     weeks: "weeks"
   user: 'Benutzer'
   username: 'Benutzername'
-  username_or_email: 'Username or E-mail Address'
+  username_or_email: 'Benutzername oder email-Adresse'
   users: 'Benutzer'      
   users_controller:
     cannot_delete_self: 'Sie können sich nicht selbst löschen.'   
   version: 'Version'  
   view_site: 'Website'
-  warning: 'Warning'
+  warning: 'Warnung'
   website: 'Website'
   welcome_controller:
     invalid_user: 'Ungültiger Benutzername oder Passwort.'   
     logged_out: 'Sie sind jetzt ausgeloggt.'  
-  yes: 'Yes'
+  yes: Ja
