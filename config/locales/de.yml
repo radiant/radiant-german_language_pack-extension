@@ -98,12 +98,12 @@ de:
   filter: 'Filter'
   hidden: 'Versteckt'
   hide: 'Verstecken' 
-  keywords: 'Keywords'
+  keywords: 'Schlüsselworte'
   language: 'Sprache'
   layout: 'Layout'  
   layouts: 'Layouts'
-  log_out: 'Ausloggen'
-  logged_in_as: 'Eingeloggt als'
+  log_out: 'Abmelden'
+  logged_in_as: 'Angemeldet als'
   login: 'Benutzername'
   modify: 'Bearbeiten' 
   more: 'Mehr'
@@ -186,13 +186,13 @@ de:
   testing: Testing
   text:
     layouts:
-      remove_warning: 'Sie sind sicher, das folgende Layout <strong class='warning'>dauerhaft entfernen</strong> zu wollen?'   
+      remove_warning: "Sie sind sicher, das folgende Layout <strong class='warning'>dauerhaft entfernen</strong> zu wollen?"
     pages: 
-      remove_warning: 'Sie sind sicher, folgende {{pages}} <strong class='warning'>dauerhaft entfernen</strong> zu wollen?' 
+      remove_warning: "Sie sind sicher, folgende {{pages}} <strong class='warning'>dauerhaft entfernen</strong> zu wollen?"
     snippets:
-      remove_warning:'Sind Sie sich sicher, dass Sie das folgende Snippet <strong class='warning'>dauerhaft entfernen</strong> wollen?'
+      remove_warning: "Sind Sie sich sicher, dass Sie das folgende Snippet <strong class='warning'>dauerhaft entfernen</strong> wollen?"
     users: 
-      remove_warning: 'Sind Sie sich sicher, dass Sie den Benutzer <strong class='warning'>dauerhaft entfernen</strong> möchten?'
+      remove_warning: "Sind Sie sich sicher, dass Sie den Benutzer <strong class='warning'>dauerhaft entfernen</strong> möchten?"
   this_file_language: 'Deutsch' 
   time:
     am: ''
