@@ -6,9 +6,9 @@ de:
       messages:
         blank: 'obligatorisch' # required
         invalid: 'ungültiges Format' #invalid_format
-        not_a_number: 'Muss eine Zahl sein' # must be number
-        not_a_page: "there must be a page at this address"
-        not_permitted: 'muss einer der erlaubten Werte sein'
+        not_a_number: 'muss eine Zahl sein' # must be number
+        not_a_page: 'muss eine gültige Seite sein'
+        not_permitted: 'muss ein erlaubter Wert sein'
         taken: 'Name schon in Benutzung' # name_in_use
         too_long: '{{count}}-Zeichen-Limit' # character_limit
         too_short: '{{count}}-Zeichen-Minimum' # character_minimum
@@ -26,19 +26,10 @@ de:
             password:
               confirmation: 'muss der Bestätigung entsprechen' # password_confirmation
   add_child: 'Neue Unterseite'
-  add_field: 'Feld hinzufügen'
+  add_field: 'Neues Feld'
   add_part: 'Neuer Part'
   add_tab: 'fügt Tab ein'   
   admin: 'Administrator' 
-  asset_types:
-    all: Alle
-    images: Bilder
-    videos: Videos
-    audios: Töne
-    fonts: Schriftarten
-    flashes: Flash
-    pdfs: PDF
-    documents: Dokumente
   available_tags: 'Verfügbare Tags'
   available_tags_for: 'Verfügbare Tags für {{name}}'
   body: 'Inhalt'  
@@ -52,25 +43,25 @@ de:
   close: 'Schliessen'
   config:
     admin:
-      title: 'Admin-Bereich'
+      title: 'Admin-Überschrift'
     defaults:
-      locale: 'default language'
+      locale: 'Standardsprache'
       page:
-        fields: "Felder"
-        filter: "Filter"
-        parts: "Teile"
-        status: "Status"
+        fields: 'Seitenfelder'
+        filter: 'Seitenfilter'
+        parts: 'Seitenteile'
+        status: 'Seitenstatus'
       snippet:
-        filter: "Filter"
+        filter: 'Snippetfilter'
     dev:
-      host: "Entwicklungsname"
+      host: 'Entwicklungsname'
     local:
-      timezone: "Lokale Zeitzone"
+      timezone: 'Lokale Zeitzone'
     site:
-      host: "Domain der Webseite"
-      title: "Titel der Webseite"
+      host: 'Website-Domain'
+      title: 'Website-Titel'
     user:
-      allow_password_reset?: "Passwort zurücksetzbar"
+      allow_password_reset?: 'allow password reset'
   content: 'Inhalt'
   content_type: 'Inhalt&#8209;Typ'    
   creating_status: 'Erzeuge {{model}}&#8230;'
@@ -79,10 +70,10 @@ de:
     abbr_month_names: [~, Jan, Feb, Mär, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov, Dez]
     day_names: [Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag]
     formats:
-      default: "%d.%m.%Y"
-      long: "%e. %B %Y"
-      only_day: "%e"
-      short: "%e. %b"
+      default: '%d.%m.%Y'
+      long: '%e. %B %Y'
+      only_day: '%e'
+      short: '%e. %b'
     month_names: [~, Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
     order: [ :day, :month, :year ]
   delete_layout: 'Layout löschen'  
@@ -93,7 +84,7 @@ de:
   design: 'Design'
   designer: 'Designer'
   draft: 'Entwurf'
-  edit: 'Edit'
+  edit: 'Bearbeiten'
   edit_configuration: 'Konfiguration bearbeiten'
   edit_layout: 'Layout bearbeiten'
   edit_page:  'Seite bearbeiten'   
@@ -107,7 +98,7 @@ de:
   filter: 'Filter'
   hidden: 'Versteckt'
   hide: 'Verstecken' 
-  keywords: 'Schlüsselworte'
+  keywords: 'Keywords'
   language: 'Sprache'
   layout: 'Layout'  
   layouts: 'Layouts'
@@ -116,7 +107,7 @@ de:
   login: 'Benutzername'
   modify: 'Bearbeiten' 
   more: 'Mehr'
-  more_info: 'More Info'
+  more_info: 'Mehr Information'
   name: 'Name'
   new_homepage: 'Neue Startseite'
   new_layout: 'Neues Layout'    
@@ -124,7 +115,7 @@ de:
   new_password: 'Neues Passwort'
   new_snippet: 'Neues Snippet'
   new_user: 'Neuer Benutzer'  
-  no: Nein
+  no: 'Nein'
   no_layouts: 'Keine Layouts' 
   no_pages: 'Keine Seiten' 
   no_snippets: 'Keine Snippets' 
@@ -133,15 +124,15 @@ de:
   optional: 'Optional'
   or: 'oder'
   page: 'Seite'
-  page_hierarchy: 'Seitenhierarchie'
+  page_hierarchy: 'Seitenhierarchie der aktuellen Seite'
   page_page: 'Seitenpart'
   page_title: 'Seitentitel'  
   page_type: 'Seitentyp'
   pages: 'Seiten'     
   pages_controller:
-    removed_many: "Die Seiten wurden erfolgreich gelöscht."   
-    removed_one: "Die Seite wurde erfolgreich gelöscht."  
-    saved: "Ihre Seite wurde gespeichert."  
+    removed_many: 'Die Seiten wurden erfolgreich gelöscht.'   
+    removed_one: 'Die Seite wurde erfolgreich gelöscht.'  
+    saved: 'Ihre Seite wurde gespeichert.'  
   password: 'Passwort' 
   password_confirmation: 'Neues Passwort bestätigen'
   personal: 'Persönlich'
@@ -158,27 +149,27 @@ de:
   published_on: 'Veröffentlicht am' 
   reference:  'Referenz'
   remember_me: 'Merken'
-  remember_me_in_this_browser: 'Remember me in this browser'
+  remember_me_in_this_browser: 'Anmeldung in diesem Browser merken.'
   remove: 'Löschen'
-  remove_field: 'Remove Field'
+  remove_field: 'Feld löschen'
   remove_layout: 'Layout löschen' 
   remove_page: 'Seite löschen'
   remove_pages: '{{pages}} löschen' 
-  remove_snippet: 'Remove Snippet'
+  remove_snippet: 'Snippet löschen'
   remove_tab: 'Tab löschen'
   remove_user: 'Benutzer löschen'
   required: 'erforderlich'  
   resource_controller:
-    not_found: "{{humanized_model_name}} wurde nicht gefunden."
-    removed: "{{humanized_model_name}} wurde gelöscht."  
-    saved: "{{humanized_model_name}} wurde gespeichert."
-    update_conflict: "Seit dem letzten Laden wurde {{humanized_model_name}} geändert. Änderungen können nicht ohne Verlust gespeichert werden." 
-    validation_errors: "Beim Validieren dieses Formulars sind Fehler aufgetreten. Bitte überprüfen Sie die Eingaben und korrigieren Sie die Fehler."
+    not_found: '{{humanized_model_name}} wurde nicht gefunden.'
+    removed: '{{humanized_model_name}} wurde gelöscht.'  
+    saved: '{{humanized_model_name}} wurde gespeichert.'
+    update_conflict: 'Seit dem letzten Laden wurde {{humanized_model_name}} geändert. Änderungen können nicht ohne Verlust gespeichert werden.' 
+    validation_errors: 'Beim Validieren dieses Formulars sind Fehler aufgetreten. Bitte überprüfen Sie die Eingaben und korrigieren Sie die Fehler.'
   reviewed: 'Überprüft'
   roles: 'Rollen'
   saving_changes: Änderungen werden gespeichert
-  saving_preferences: Voreinstellungen werden gespeichert
-  scheduled: "Geplant"
+  saving_preferences: Einstellungen werden gespeichert
+  scheduled: Geplant
   search_tags: 'Tags durchsuchen:'
   select:
     default: '<Standardwert>'
@@ -186,9 +177,7 @@ de:
     none: '<Keine>' 
     normal: '<Normal>'
   settings: 'Einstellungen'
-  sheets:
-    root_required: Eine Startseite muss angelegt sein.
-  show_all: 'Show all'
+  show_all: 'Alle zeigen'
   slug: 'Slug'
   snippet: 'Snippet'
   snippets: 'Snippets'
@@ -197,26 +186,26 @@ de:
   testing: Testing
   text:
     layouts:
-      remove_warning: 'Sind sie sicher, das folgende Layout <strong class="warning">dauerhaft entfernen</strong> zu wollen?'   
+      remove_warning: 'Sie sind sicher, das folgende Layout <strong class='warning'>dauerhaft entfernen</strong> zu wollen?'   
     pages: 
-      remove_warning: 'Sind sie sicher, folgende {{pages}} <strong class="warning">dauerhaft entfernen</strong> zu wollen?' 
+      remove_warning: 'Sie sind sicher, folgende {{pages}} <strong class='warning'>dauerhaft entfernen</strong> zu wollen?' 
     snippets:
-      remove_warning:'Sind Sie sicher, dass Sie das folgende Snippet <strong class="warning">dauerhaft entfernen</strong> wollen?'
+      remove_warning:'Sind Sie sich sicher, dass Sie das folgende Snippet <strong class='warning'>dauerhaft entfernen</strong> wollen?'
     users: 
-      remove_warning: 'Sind Sie sicher, dass Sie den Benutzer <strong class="warning">dauerhaft entfernen</strong> möchten?'
-  this_file_language: "Deutsch" 
+      remove_warning: 'Sind Sie sich sicher, dass Sie den Benutzer <strong class='warning'>dauerhaft entfernen</strong> möchten?'
+  this_file_language: 'Deutsch' 
   time:
-    am: ""
+    am: ''
     formats:
       datetime:
         formats:
-          default: "%Y-%m-%dT%H:%M:%S%Z"
-      default: "%A, %e. %B %Y, %H:%M Uhr" 
-      long: "%A, %e. %B %Y, %H:%M Uhr"
-      only_second: "%S"
-      short: "%e.%m., %H:%M Uhr"
-      time: "%H:%M Uhr"
-      timestamp: "%H:%M am %d. %B, %Y"
+          default: '%Y-%m-%dT%H:%M:%S%Z'
+      default: '%A, %e. %B %Y, %H:%M Uhr' 
+      long: '%A, %e. %B %Y, %H:%M Uhr'
+      only_second: '%S'
+      short: '%e.%m., %H:%M Uhr'
+      time: '%H:%M Uhr'
+      timestamp: '%H:%M am %d. %B, %Y'
     pm: 'PM'
   timestamp:
     at: 'um'
@@ -224,18 +213,18 @@ de:
     last_updated: 'Zuletzt geändert'
   type: 'Typ'
   units:
-    GB: "GB"
-    KB: "KB"
-    MB: "MB"
-    days: "days"
-    hours: "hours"
-    minutes: "minutes"
-    months: "months"
-    seconds: "seconds"
-    weeks: "weeks"
+    GB: 'GB'
+    KB: 'KB'
+    MB: 'MB'
+    days: 'Tage'
+    hours: 'Stunden'
+    minutes: 'Minuten'
+    months: 'Monate'
+    seconds: 'Sekunden'
+    weeks: 'Wochen'
   user: 'Benutzer'
   username: 'Benutzername'
-  username_or_email: 'Benutzername oder email-Adresse'
+  username_or_email: 'Benutzername oder Email-Adresse'
   users: 'Benutzer'      
   users_controller:
     cannot_delete_self: 'Sie können sich nicht selbst löschen.'   
@@ -246,4 +235,4 @@ de:
   welcome_controller:
     invalid_user: 'Ungültiger Benutzername oder Passwort.'   
     logged_out: 'Sie sind jetzt ausgeloggt.'  
-  yes: Ja
+  yes: 'Ja'
