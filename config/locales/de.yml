@@ -61,7 +61,7 @@ de:
       host: 'Website-Domain'
       title: 'Website-Titel'
     user:
-      allow_password_reset?: 'allow password reset'
+      allow_password_reset?: 'Passwort zurücksetzbar?'
   content: 'Inhalt'
   content_type: 'Inhalt&#8209;Typ'    
   creating_status: 'Erzeuge {{model}}&#8230;'
@@ -115,7 +115,7 @@ de:
   new_password: 'Neues Passwort'
   new_snippet: 'Neues Snippet'
   new_user: 'Neuer Benutzer'  
-  no: 'Nein'
+  'no': 'Nein' #yes/no/true/false are treated as booleans unless Strings, see http://www.yaml.org/refcard.html
   no_layouts: 'Keine Layouts' 
   no_pages: 'Keine Seiten' 
   no_snippets: 'Keine Snippets' 
@@ -235,4 +235,4 @@ de:
   welcome_controller:
     invalid_user: 'Ungültiger Benutzername oder Passwort.'   
     logged_out: 'Sie sind jetzt ausgeloggt.'  
-  yes: 'Ja'
+  'yes': 'Ja' #yes/no/true/false are treated as booleans unless Strings, see http://www.yaml.org/refcard.html
