@@ -4,7 +4,7 @@ de:
     author:
       Autor der aktuellen Seite.
   
-    breadcrumb:
+    breadcrumb: |
       @breadcrumb@-Attribut der aktuellen Seite.
       
     breadcrumbs:
@@ -381,7 +381,7 @@ de:
 
       <pre><code><r:normal><r:unless_last>...</r:unless_last></r:normal></code></pre>
   
-    navigation:
+    navigation: |
       Gibt eine Liste von Links (spezifiziert im @url@-Attribut) anhand der folgenden
       drei Stati aus&#58;
 

@@ -4,11 +4,9 @@ de:
   activerecord:
     errors:
       messages:
-        <<: *errors_messages
         not_a_page: 'muss eine gültige Seite sein'
         not_permitted: 'muss ein erlaubter Wert sein'
       template:
-        <<: *errors_template
 
       full_messages:
         format: "%{attribute} %{message}"
