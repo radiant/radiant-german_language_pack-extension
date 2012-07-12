@@ -4,14 +4,13 @@ de:
   activerecord:
     errors:
       messages:
-        blank: 'obligatorisch' # required
-        invalid: 'ungültiges Format' #invalid_format
-        not_a_number: 'Muss eine Zahl sein' # must be number
-        not_a_page: "there must be a page at this address"
-        not_permitted: 'this must be one of the permitted values'
-        taken: 'Name schon in Benutzung' # name_in_use
-        too_long: '{{count}}-Zeichen-Limit' # character_limit
-        too_short: '{{count}}-Zeichen-Minimum' # character_minimum
+        not_a_page: 'muss eine gültige Seite sein'
+        not_permitted: 'muss ein erlaubter Wert sein'
+      template:
+
+      full_messages:
+        format: "%{attribute} %{message}"
+
       models:
         page:
           attributes:
@@ -25,14 +24,15 @@ de:
               taken: 'Login schon in Benutzung' # login already in use
             password:
               confirmation: 'muss der Bestätigung entsprechen' # password_confirmation
+
   add_child: 'Neue Unterseite'
-  add_field: 'Add Field'
+  add_field: 'Neues Feld'
   add_part: 'Neuer Part'
   add_tab: 'fügt Tab ein'   
   admin: 'Administrator' 
   available_tags: 'Verfügbare Tags'
   available_tags_for: 'Verfügbare Tags für {{name}}'
-  body: 'Body'  
+  body: 'Inhalt'  
   breadcrumb: 'Breadcrumb'
   buttons:
     create: '{{name}} erstellen'     
@@ -43,39 +43,127 @@ de:
   close: 'Schliessen'
   config:
     admin:
-      title: 'admin header title'
+      title: 'Admin-Überschrift'
     defaults:
-      locale: 'default language'
+      locale: 'Standardsprache'
       page:
-        fields: "page fields"
-        filter: "page filter"
-        parts: "page parts"
-        status: "page status"
+        fields: 'Seitenfelder'
+        filter: 'Seitenfilter'
+        parts: 'Seitenteile'
+        status: 'Seitenstatus'
       snippet:
-        filter: "snippet filter"
+        filter: 'Snippetfilter'
     dev:
-      host: "dev site domain name"
+      host: 'Entwicklungsname'
     local:
-      timezone: "local timezone"
+      timezone: 'Lokale Zeitzone'
     site:
-      host: "site domain"
-      title: "site title"
+      host: 'Website-Domain'
+      title: 'Website-Titel'
     user:
-      allow_password_reset?: "allow password reset"
+      allow_password_reset?: 'Passwort zurücksetzbar?'
   content: 'Inhalt'
   content_type: 'Inhalt&#8209;Typ'    
   creating_status: 'Erzeuge {{model}}&#8230;'
   date:
-    abbr_day_names: [So, Mo, Di, Mi, Do, Fr, Sa]
-    abbr_month_names: [~, Jan, Feb, Mär, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov, Dez]
-    day_names: [Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag]
+    abbr_day_names:
+      - So
+      - Mo
+      - Di
+      - Mi
+      - Do
+      - Fr
+      - Sa
+    abbr_month_names:
+      - ~
+      - Jan
+      - Feb
+      - Mär
+      - Apr
+      - Mai
+      - Jun
+      - Jul
+      - Aug
+      - Sep
+      - Okt
+      - Nov
+      - Dez
+    day_names:
+      - Sonntag
+      - Montag
+      - Dienstag
+      - Mittwoch
+      - Donnerstag
+      - Freitag
+      - Samstag
     formats:
-      default: "%d.%m.%Y"
-      long: "%e. %B %Y"
-      only_day: "%e"
-      short: "%e. %b"
-    month_names: [~, Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
-    order: [ :day, :month, :year ]
+      default: '%d.%m.%Y'
+      long: '%e. %B %Y'
+      only_day: '%e'
+      short: '%e. %b'
+    month_names:
+      - ~
+      - Januar
+      - Februar
+      - März
+      - April
+      - Mai
+      - Juni
+      - Juli
+      - August
+      - September
+      - Oktober
+      - November
+      - Dezember
+    order:
+      - :day
+      - :month
+      - :year
+      
+  datetime:
+    distance_in_words:
+      half_a_minute: 'eine halbe Minute'
+      less_than_x_seconds:
+        one: 'weniger als eine Sekunde'
+        other: 'weniger als %{count} Sekunden'
+      x_seconds:
+        one: 'eine Sekunde'
+        other: '%{count} Sekunden'
+      less_than_x_minutes:
+        one: 'weniger als eine Minute'
+        other: 'weniger als %{count} Minuten'
+      x_minutes:
+        one: 'eine Minute'
+        other: '%{count} Minuten'
+      about_x_hours:
+        one: 'etwa eine Stunde'
+        other: 'etwa %{count} Stunden'
+      x_days:
+        one: 'ein Tag'
+        other: '%{count} Tage'
+      about_x_months:
+        one: 'etwa ein Monat'
+        other: 'etwa %{count} Monate'
+      x_months:
+        one: 'ein Monat'
+        other: '%{count} Monate'
+      almost_x_years:
+        one: 'fast ein Jahr'
+        other: 'fast %{count} Jahre'
+      about_x_years:
+        one: 'etwa ein Jahr'
+        other: 'etwa %{count} Jahre'
+      over_x_years:
+        one: 'mehr als ein Jahr'
+        other: 'mehr als %{count} Jahre'
+    prompts:
+      second: "Sekunden"
+      minute: "Minuten"
+      hour: "Stunden"
+      day: "Tag"
+      month: "Monat"
+      year: "Jahr"
+
   delete_layout: 'Layout löschen'  
   delete_pages: 'Lösche {{pages}}'  
   delete_snippet: 'Snippet löschen'
@@ -84,55 +172,149 @@ de:
   design: 'Design'
   designer: 'Designer'
   draft: 'Entwurf'
-  edit: 'Edit'
-  edit_configuration: 'Edit Configuration'
+  edit: 'Bearbeiten'
+  edit_configuration: 'Konfiguration bearbeiten'
   edit_layout: 'Layout bearbeiten'
   edit_page:  'Seite bearbeiten'   
-  edit_preferences: 'Edit Preferences'
-  edit_settings: 'Edit Settings'
+  edit_preferences: 'Voreinstellungen bearbeiten'
+  edit_settings: 'Einstellungen bearbeiten'
   edit_snippet: 'Snippet bearbeiten'
   edit_user: 'Benutzer bearbeiten'
   email_address: 'E-Mail Adresse'
+  errors:
+    format: "%{attribute} %{message}"
+
+    messages: &errors_messages
+      inclusion: "ist kein gültiger Wert"
+      exclusion: "ist nicht verfügbar"
+      invalid: "ist nicht gültig"
+      confirmation: "stimmt nicht mit der Bestätigung überein"
+      accepted: "muss akzeptiert werden"
+      empty: "muss ausgefüllt werden"
+      blank: "muss ausgefüllt werden"
+      too_long: "ist zu lang (nicht mehr als %{count} Zeichen)"
+      too_short: "ist zu kurz (nicht weniger als %{count} Zeichen)"
+      wrong_length: "hat die falsche Länge (muss genau %{count} Zeichen haben)"
+      not_a_number: "ist keine Zahl"
+      greater_than: "muss größer als %{count} sein"
+      greater_than_or_equal_to: "muss größer oder gleich %{count} sein"
+      equal_to: "muss genau %{count} sein"
+      less_than: "muss kleiner als %{count} sein"
+      less_than_or_equal_to: "muss kleiner oder gleich %{count} sein"
+      odd: "muss ungerade sein"
+      even: "muss gerade sein"
+      not_an_integer: "muss ganzzahlig sein"
+      taken: "ist bereits vergeben"
+      record_invalid: "Gültigkeitsprüfung ist fehlgeschlagen: %{errors}"
+    template: &errors_template
+      header:
+        one:    "Konnte %{model} nicht speichern: ein Fehler."
+        other:  "Konnte %{model} nicht speichern: %{count} Fehler."
+      body: "Bitte überprüfen Sie die folgenden Felder:"
+
   extension: 'Erweiterung'
   extensions: 'Erweiterungen' 
   filter: 'Filter'
+  helpers:
+    select:
+      prompt: "Bitte wählen"
+
+    submit:
+      create: '%{model} erstellen'
+      update: '%{model} aktualisieren'
+      submit: '%{model} speichern'
+
   hidden: 'Versteckt'
   hide: 'Verstecken' 
-  keywords: 'Keywords'
+  keywords: 'Schlüsselworte'
   language: 'Sprache'
   layout: 'Layout'  
   layouts: 'Layouts'
-  log_out: 'Ausloggen'
-  logged_in_as: 'Eingeloggt als'
+  log_out: 'Abmelden'
+  logged_in_as: 'Angemeldet als'
   login: 'Benutzername'
   modify: 'Bearbeiten' 
   more: 'Mehr'
-  more_info: 'More Info'
+  more_info: 'Mehr Information'
   name: 'Name'
-  new_homepage: 'New Homepage'
+  new_homepage: 'Neue Startseite'
   new_layout: 'Neues Layout'    
   new_page: 'Neue Seite'
   new_password: 'Neues Passwort'
   new_snippet: 'Neues Snippet'
   new_user: 'Neuer Benutzer'  
-  no: 'No'
+  'no': 'Nein' #yes/no/true/false are treated as booleans unless Strings, see http://www.yaml.org/refcard.html
   no_layouts: 'Keine Layouts' 
   no_pages: 'Keine Seiten' 
   no_snippets: 'Keine Snippets' 
-  normal_page: 'Normal Page'
+  normal_page: 'Normale Seite'
   notes: 'Notizen'    
+  number:
+    format:
+      precision: 2
+      separator: ','
+      delimiter: '.'
+      significant: false
+      strip_insignificant_zeros: false
+    currency:
+      format:
+        unit: '€'
+        format: '%n %u'
+        separator: ","
+        delimiter: "."
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+    percentage:
+      format:
+        delimiter: ""
+    precision:
+      format:
+        delimiter: ""
+    human:
+      format:
+        delimiter: ""
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        # Storage units output formatting.
+        # %u is the storage unit, %n is the number (default: 2 MB)
+        format: "%n %u"
+        units:
+          byte:
+            one:   "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: Tausend
+          million: Millionen
+          billion:
+            one: Milliarde
+            other: Milliarden
+          trillion: Billionen
+          quadrillion:
+            one: Billiarde
+            other: Billiarden
+
   optional: 'Optional'
   or: 'oder'
   page: 'Seite'
-  page_hierarchy: 'Page hierarchy of the current site'
+  page_hierarchy: 'Seitenhierarchie der aktuellen Seite'
   page_page: 'Seitenpart'
   page_title: 'Seitentitel'  
   page_type: 'Seitentyp'
   pages: 'Seiten'     
   pages_controller:
-    removed_many: "Die Seiten wurden erfolgreich gelöscht."   
-    removed_one: "Die Seite wurde erfolgreich gelöscht."  
-    saved: "Ihre Seite wurde gespeichert."  
+    removed_many: 'Die Seiten wurden erfolgreich gelöscht.'   
+    removed_one: 'Die Seite wurde erfolgreich gelöscht.'  
+    saved: 'Ihre Seite wurde gespeichert.'  
   password: 'Passwort' 
   password_confirmation: 'Neues Passwort bestätigen'
   personal: 'Persönlich'
@@ -143,33 +325,33 @@ de:
   preferences_controller:
     error_updating: 'Beim Aktualisieren Ihrer Einstellungen ist ein Fehler aufgetreten.'    
     updated: 'Ihre Einstellungen wurden aktualisiert.' 
-  preview: 'Preview'
+  preview: 'Vorschau'
   published: 'Veröffentlicht' 
   published_at: 'Veröffentlicht am' 
   published_on: 'Veröffentlicht am' 
   reference:  'Referenz'
   remember_me: 'Merken'
-  remember_me_in_this_browser: 'Remember me in this browser'
+  remember_me_in_this_browser: 'Anmeldung in diesem Browser merken.'
   remove: 'Löschen'
-  remove_field: 'Remove Field'
+  remove_field: 'Feld löschen'
   remove_layout: 'Layout löschen' 
   remove_page: 'Seite löschen'
   remove_pages: '{{pages}} löschen' 
-  remove_snippet: 'Remove Snippet'
+  remove_snippet: 'Snippet löschen'
   remove_tab: 'Tab löschen'
   remove_user: 'Benutzer löschen'
   required: 'erforderlich'  
   resource_controller:
-    not_found: "{{humanized_model_name}} wurde nicht gefunden."
-    removed: "{{humanized_model_name}} wurde gelöscht."  
-    saved: "{{humanized_model_name}} wurde gespeichert."
-    update_conflict: "Seit dem letzten Laden wurde {{humanized_model_name}} geändert. Änderungen können nicht ohne Verlust gespeichert werden." 
-    validation_errors: "Beim Validieren dieses Formulars sind Fehler aufgetreten. Bitte überprüfen Sie die Eingaben und korrigieren Sie die Fehler."
+    not_found: '{{humanized_model_name}} wurde nicht gefunden.'
+    removed: '{{humanized_model_name}} wurde gelöscht.'  
+    saved: '{{humanized_model_name}} wurde gespeichert.'
+    update_conflict: 'Seit dem letzten Laden wurde {{humanized_model_name}} geändert. Änderungen können nicht ohne Verlust gespeichert werden.' 
+    validation_errors: 'Beim Validieren dieses Formulars sind Fehler aufgetreten. Bitte überprüfen Sie die Eingaben und korrigieren Sie die Fehler.'
   reviewed: 'Überprüft'
   roles: 'Rollen'
   saving_changes: Änderungen werden gespeichert
   saving_preferences: Einstellungen werden gespeichert
-  scheduled: "Geplant"
+  scheduled: Geplant
   search_tags: 'Tags durchsuchen:'
   select:
     default: '<Standardwert>'
@@ -177,62 +359,70 @@ de:
     none: '<Keine>' 
     normal: '<Normal>'
   settings: 'Einstellungen'
-  show_all: 'Show all'
+  show_all: 'Alle zeigen'
   slug: 'Slug'
   snippet: 'Snippet'
   snippets: 'Snippets'
   status: 'Status'
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " und "
+      last_word_connector: " und "
+    select:
+      prompt: "Bitte wählen:"
+
     # Warnings and info text:
   testing: Testing
   text:
     layouts:
-      remove_warning: 'Sie sind sicher, das folgende Layout <strong class="warning">dauerhaft entfernen</strong> zu wollen?'   
+      remove_warning: "Sie sind sicher, das folgende Layout <strong class='warning'>dauerhaft entfernen</strong> zu wollen?"
     pages: 
-      remove_warning: 'Sie sind sicher, folgende {{pages}} <strong class="warning">dauerhaft entfernen</strong> zu wollen?' 
+      remove_warning: "Sie sind sicher, folgende {{pages}} <strong class='warning'>dauerhaft entfernen</strong> zu wollen?"
     snippets:
-      remove_warning:'Sind Sie sich sicher, dass Sie das folgende Snippet <strong class="warning">dauerhaft entfernen</strong> wollen?'
+      remove_warning: "Sind Sie sich sicher, dass Sie das folgende Snippet <strong class='warning'>dauerhaft entfernen</strong> wollen?"
     users: 
-      remove_warning: 'Sind Sie sich sicher, dass Sie den Benutzer <strong class="warning">dauerhaft entfernen</strong> möchten?'
-  this_file_language: "Deutsch" 
+      remove_warning: "Sind Sie sich sicher, dass Sie den Benutzer <strong class='warning'>dauerhaft entfernen</strong> möchten?"
+  this_file_language: 'Deutsch' 
   time:
-    am: ""
+    am: "vormittags"
     formats:
       datetime:
         formats:
-          default: "%Y-%m-%dT%H:%M:%S%Z"
-      default: "%A, %e. %B %Y, %H:%M Uhr" 
-      long: "%A, %e. %B %Y, %H:%M Uhr"
-      only_second: "%S"
-      short: "%e.%m., %H:%M Uhr"
-      time: "%H:%M Uhr"
-      timestamp: "%H:%M am %d. %B, %Y"
-    pm: 'PM'
+          default: '%Y-%m-%dT%H:%M:%S%Z'
+      default: "%A, %d. %B %Y, %H:%M Uhr"
+      long: "%A, %d. %B %Y, %H:%M Uhr"
+      only_second: '%S'
+      short: "%d. %B, %H:%M Uhr"
+      time: '%H:%M Uhr'
+      timestamp: '%H:%M am %d. %B, %Y'
+    pm: "nachmittags"
   timestamp:
     at: 'um'
     by: 'von'
     last_updated: 'Zuletzt geändert'
-  type: 'Type'
+  type: 'Typ'
   units:
-    GB: "GB"
-    KB: "KB"
-    MB: "MB"
-    days: "days"
-    hours: "hours"
-    minutes: "minutes"
-    months: "months"
-    seconds: "seconds"
-    weeks: "weeks"
+    GB: 'GB'
+    KB: 'KB'
+    MB: 'MB'
+    days: 'Tage'
+    hours: 'Stunden'
+    minutes: 'Minuten'
+    months: 'Monate'
+    seconds: 'Sekunden'
+    weeks: 'Wochen'
   user: 'Benutzer'
   username: 'Benutzername'
-  username_or_email: 'Username or E-mail Address'
+  username_or_email: 'Benutzername oder Email-Adresse'
   users: 'Benutzer'      
   users_controller:
     cannot_delete_self: 'Sie können sich nicht selbst löschen.'   
   version: 'Version'  
   view_site: 'Website'
-  warning: 'Warning'
+  warning: 'Warnung'
   website: 'Website'
   welcome_controller:
     invalid_user: 'Ungültiger Benutzername oder Passwort.'   
     logged_out: 'Sie sind jetzt ausgeloggt.'  
-  yes: 'Yes'
+  'yes': 'Ja' #yes/no/true/false are treated as booleans unless Strings, see http://www.yaml.org/refcard.html
