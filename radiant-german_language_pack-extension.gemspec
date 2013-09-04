@@ -3,6 +3,7 @@
 Gem::Specification.new do |s|
   s.name        = "radiant-german_language_pack-extension"
   s.version     = '1.0.1'
+  s.license     = 'MIT'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Radiant CMS Dev Team"]
   s.email       = ["radiant@radiantcms.org"]
