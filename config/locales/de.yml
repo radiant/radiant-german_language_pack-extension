@@ -180,7 +180,7 @@ de:
   edit_settings: 'Einstellungen bearbeiten'
   edit_snippet: 'Snippet bearbeiten'
   edit_user: 'Benutzer bearbeiten'
-  email_address: 'E-Mail Adresse'
+  email_address: 'E-Mail-Adresse'
   errors:
     format: "%{attribute} %{message}"
 
@@ -414,7 +414,7 @@ de:
     weeks: 'Wochen'
   user: 'Benutzer'
   username: 'Benutzername'
-  username_or_email: 'Benutzername oder Email-Adresse'
+  username_or_email: 'Benutzername oder E-Mail-Adresse'
   users: 'Benutzer'      
   users_controller:
     cannot_delete_self: 'Sie können sich nicht selbst löschen.'   
